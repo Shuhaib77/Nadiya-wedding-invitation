@@ -85,7 +85,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ t
 
       <p className="orn gv">With love &amp; prayers</p>
 
-      <Rsvp whatsapp={c.whatsapp} by={c.rsvpBy} />
+      <Rsvp whatsapp={c.whatsapp} by={c.rsvpBy} date={`${weekday}, ${day} ${month} ${year}`} time={time} venue={`${e.venue}, ${e.place}`} />
 
       <footer>
         <p className="gv">With Love</p>

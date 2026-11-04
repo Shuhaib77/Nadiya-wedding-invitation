@@ -121,3 +121,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .sw{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;background:#fff;padding:9px;border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.25);z-index:9}
 .sw button{width:28px;height:28px;border-radius:50%;border:2px solid #fff;cursor:pointer}
 .sw button[aria-pressed=true]{outline:2px solid #333}
+/* RSVP modal */
+.mo{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:18px;background:color-mix(in srgb,var(--deep) 75%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:fade .3s}
+.mb{width:100%;max-width:420px;max-height:90svh;overflow:auto;background:#fff;color:var(--ink);border-radius:24px;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:mup .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes mup{from{opacity:0;transform:translateY(40px) scale(.96)}}
+.mt{text-align:center;color:#fff;padding:34px 24px 26px;background:linear-gradient(150deg,var(--deep),var(--mid))}
+.mt.no{background:linear-gradient(150deg,var(--ink),var(--gold))}
+.mi{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;animation:pop .6s .2s cubic-bezier(.2,.9,.3,1.4) both}
+.mi svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+.mt h3{font:italic 400 26px var(--f-pf),serif}
+.mt p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.82);max-width:30ch;margin:8px auto 0}
+.mr{padding:14px 22px 4px}
+.mr>div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mr>div:last-child{border:0}.mr span{color:var(--muted)}.mr b{font-weight:500;text-align:right}
+.ba{font-style:normal;display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px}
+.ba.y{background:color-mix(in srgb,var(--mid) 12%,transparent);color:var(--deep)}
+.ba.n{background:color-mix(in srgb,var(--gold) 22%,transparent);color:var(--ink)}
+.mf{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px 20px 24px}
+.mf .wa{font:inherit;font-size:14px;font-weight:500;cursor:pointer;border:0}
+.mf .wa.o{background:transparent;color:var(--deep);border:1px solid var(--deep)}
