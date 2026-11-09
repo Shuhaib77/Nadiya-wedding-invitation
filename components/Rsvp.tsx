@@ -23,10 +23,19 @@ export default function Rsvp({ whatsapp, by, date, time, venue }: Props) {
     return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
   }, [open]);
 
-  const send = (ok: boolean) => {
+  const send = async (ok: boolean) => {
     if (!name.trim()) { setErr(true); inputRef.current?.focus(); return; }
     setErr(false);
     setAnswer(ok);
+    try {
+      await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, attending: ok, guests }),
+      });
+    } catch (e) {
+      console.error("RSVP submit error:", e);
+    }
   };
 
   const msg = yes
