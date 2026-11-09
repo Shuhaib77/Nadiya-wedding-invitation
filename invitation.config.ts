@@ -27,10 +27,10 @@ export const invitation = {
     venue: "Kandimannil Meethal (Ho)",
     place: "Edavarad",
     note: "Wedding ceremony",
-    mapUrl: "https://maps.google.com/?q=Kandimannil+Meethal+Edavarad",
+    mapUrl: "https://www.google.com/maps?q=11.596010,75.729293",
   },
   rsvpBy: "3 January 2027",
   hosts: "Hameed K.M & Soudha Hameed",
-  regards: "Best regards: Sahadiya · Jaseer · Izin Zaad",
-  whatsapp: "910000000000", // country code + number, no + sign
+  regards: "Best regards: Sahadiya · Jaseer · Izin Zaad . Op Family & Km Family",
+  whatsapp: "7511178407", // country code + number, no + sign
 };
